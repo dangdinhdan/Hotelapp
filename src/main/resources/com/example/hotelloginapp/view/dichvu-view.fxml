@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelloginapp.controller.DichVuContronller">
+   <children>
+      <BorderPane layoutX="144.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" styleClass="top-box" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <VBox prefHeight="471.0" prefWidth="1080.0" styleClass="box-chim" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1080.0" styleClass="box-chim" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <Label text="Danh sách dịch vụ" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="219.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TableView fx:id="tableDichVu" prefHeight="214.0" prefWidth="455.0" HBox.hgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="colMaDV" prefWidth="189.0" text="Mã dịch vụ" />
+                              <TableColumn fx:id="colTenDV" prefWidth="402.0" text="Tên dịch vụ" />
+                              <TableColumn fx:id="colGiaDV" prefWidth="241.0" text="Giá dịch vụ" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+         <right>
+            <VBox prefHeight="483.0" prefWidth="396.0" styleClass="box-boder" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="373.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="147.0" text="Thêm mới Dịch vụ" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Mã dịch vụ" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="addMaDV" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Tên dịch vụ" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="addTenDV" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Giá dịch vụ" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="addGiaDV" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="396.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="96.0">
+                           <children>
+                              <Button fx:id="addDichVu" mnemonicParsing="false" onAction="#adddichvu" text="Thêm" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="96.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#xoadichvu" text="Xóa" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="QUẢN LÝ DỊCH VỤ">
+                     <font>
+                        <Font name="Times New Roman" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

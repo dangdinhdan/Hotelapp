@@ -1,0 +1,29 @@
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+.box-button{
+    -fx-background-color: #FFFFFF;
+}
+.Button {
+    -fx-background-radius: 0;
+}
+.top-box{
+    -fx-background-color: #DDDDDD;
+}
+.box-boder{
+    -fx-background-color: #DDDDDD;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.3, 0, 4);
+}
+.buton-huy{
+    -fx-background-radius: 10  ;
+    -fx-background-color: red;
+}
+.button-datphong{
+    -fx-background-radius: 10  ;
+    -fx-background-color: green;
+}
+.box-chim{
+    -fx-background-color: #DDDDDD;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 2);
+}

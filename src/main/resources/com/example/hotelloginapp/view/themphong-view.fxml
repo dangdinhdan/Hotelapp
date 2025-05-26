@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400" prefWidth="400" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelloginapp.controller.ThemPhongController">
+   <children>
+       <VBox alignment="CENTER" layoutX="50" layoutY="20" spacing="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <HBox alignment="CENTER" prefHeight="139.0" prefWidth="400.0">
+               <children>
+                  <Label text="Thêm phòng">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <TextField fx:id="maPhongField" prefHeight="30.0" prefWidth="250.0" promptText="Mã phòng" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <TextField fx:id="kieuPhongField" prefHeight="30.0" prefWidth="250.0" promptText="Kiểu phòng" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <TextField fx:id="giaGioField" prefHeight="30.0" prefWidth="250.0" promptText="Giá theo giờ" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <ComboBox fx:id="trangThaiBox" prefWidth="250.0" promptText="Trạng thái" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="130.0" prefWidth="400.0">
+               <children>
+                    <Button onAction="#handleAddPhong" text="Thêm phòng" />
+               </children>
+            </HBox>
+          </children>
+       </VBox>
+   </children>
+</AnchorPane>

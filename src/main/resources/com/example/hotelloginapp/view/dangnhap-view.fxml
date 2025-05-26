@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelloginapp.controller.DangNhapController">
+   <children>
+      <BorderPane layoutX="214.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <HBox alignment="CENTER" prefHeight="400.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/khachsan.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <VBox prefHeight="400.0" prefWidth="353.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="353.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="142.0" text="Hotel login">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="303.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Tài khoản" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="txtUsername" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="Username" prefHeight="31.0" prefWidth="220.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="303.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="99.0">
+                           <children>
+                              <Label text="Mật khẩu" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <PasswordField fx:id="txtPassword" prefHeight="31.0" prefWidth="220.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="353.0">
+                     <children>
+                        <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#Login" text="Đăng nhập" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

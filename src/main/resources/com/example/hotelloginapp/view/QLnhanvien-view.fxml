@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelloginapp.controller.QLNhanVienController">
+    <children>
+        <BorderPane layoutX="144.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" styleClass="top-box" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <bottom>
+                <VBox prefHeight="247.0" prefWidth="900.0" styleClass="box-chim" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1080.0" styleClass="box-chim" stylesheets="@../assets/css/style.css">
+                            <children>
+                                <Label text="Danh sách nhân viên" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="219.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <TableView fx:id="tableNhanVien" prefHeight="214.0" prefWidth="455.0" HBox.hgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colMaNV" prefWidth="145.0" text="Mã nhân viên" />
+                                        <TableColumn fx:id="colTenNV" prefWidth="213.0" text="Tên nhân viên" />
+                                        <TableColumn fx:id="colSdt" prefWidth="130.0" text="Số điện thoại" />
+                                        <TableColumn fx:id="colCccd" prefWidth="146.0" text="Số CCCD" />
+                                        <TableColumn fx:id="colPhanCap" prefWidth="132.0" text="Chức vụ" />
+                                        <TableColumn fx:id="colTaiKhoan" prefWidth="129.0" text="Tài khoản" />
+                                        <TableColumn fx:id="colMatKhau" prefWidth="113.0" text="Mật khẩu" />
+                                        <TableColumn fx:id="colGioiTinh" prefWidth="71.0" text="Giới tính" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </bottom>
+            <left>
+                <VBox prefHeight="483.0" prefWidth="651.0" styleClass="box-boder" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="651.0">
+                            <children>
+                                <Label prefHeight="28.0" prefWidth="188.0" text="Thông tin nhân viên" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <VBox prefHeight="444.0" prefWidth="331.0">
+                                    <children>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="116.0">
+                                                    <children>
+                                                        <Label text="Mã nhân viên:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbMaNV" text="label" />
+                                       </children></HBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="30.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="116.0">
+                                                    <children>
+                                                        <Label text="Họ tên:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbTenNV" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="116.0">
+                                                    <children>
+                                                        <Label text="Số CCCD:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbCccd" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="116.0">
+                                                    <children>
+                                                        <Label text="Tài khoản:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbTaiKhoan" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <VBox.margin>
+                                                <Insets top="30.0" />
+                                            </VBox.margin>
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="112.0">
+                                                    <children>
+                                                        <Label text="Số điện thoại:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="112.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbSdt" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="112.0">
+                                                    <children>
+                                                        <Label text="Chức vụ:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="112.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbPhanCap" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="112.0">
+                                                    <children>
+                                                        <Label text="Giới tính:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="112.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbGioiTinh" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="60.0" prefWidth="330.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="112.0">
+                                                    <children>
+                                                        <Label text="Mật khẩu:" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="112.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lbMatKhau" text="Label" />
+                                       </children></HBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="53.0" prefWidth="651.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="53.0" prefWidth="122.0" />
+                                <HBox alignment="CENTER" prefHeight="53.0" prefWidth="124.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </left>
+            <right>
+                <VBox prefHeight="483.0" prefWidth="396.0" styleClass="box-boder" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="373.0">
+                            <children>
+                                <Label prefHeight="28.0" prefWidth="147.0" text="Thêm mới nhân viên" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Mã nhân viên" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="addManv" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Họ tên" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="addTenNV" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Số điện thoại" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="addSdt" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Số CCCD" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="addCccd" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Tài khoản" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <TextField fx:id="addTaikhoan" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Mật khẩu" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <PasswordField fx:id="addMatkhau" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Chức vụ" />
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="242.0">
+                                            <children>
+                                                <RadioButton fx:id="rbQuanLy" mnemonicParsing="false" text="manager" />
+                                                <RadioButton fx:id="rbNhanVien" mnemonicParsing="false" text="employee">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin>
+                                                </RadioButton>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="373.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                                    <children>
+                                        <Label text="Giới tính" />
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="140.0">
+                                            <children>
+                                                <RadioButton fx:id="rbNam" mnemonicParsing="false" text="nam" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="140.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <RadioButton fx:id="rbNu" mnemonicParsing="false" text="nu" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="396.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="96.0">
+                                    <children>
+                                        <Button fx:id="addNhanvien" mnemonicParsing="false" onAction="#add" text="Thêm" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="96.0">
+                           <children>
+                                        <Button mnemonicParsing="false" onAction="#updateNhanVien" text="Chỉnh sửa" />
+                           </children></HBox>
+                                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="96.0">
+                           <children>
+                                        <Button mnemonicParsing="false" onAction="#deleteNhanVien" text="Xóa" />
+                           </children></HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </right>
+            <top>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="QUẢN LÝ NHÂN VIÊN">
+                            <font>
+                                <Font name="Times New Roman" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelloginapp.controller.DatPhongController">
+   <children>
+      <BorderPane layoutX="144.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" styleClass="top-box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="80.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="80.0" prefWidth="459.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="137.0">
+                           <children>
+                              <Label text="Mã phiếu:" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="maPhieuField" text="Label" />
+                           </children></HBox>
+                     </children></HBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="328.0" prefWidth="395.0" styleClass="box-boder" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="373.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="188.0" text="Thông tin khách hàng" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Mã khách hàng" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="maKHField" prefHeight="30.0" prefWidth="190.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Họ và tên" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="tenKHField" prefHeight="30.0" prefWidth="190.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Số điện thoại" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="sdtKHField" prefHeight="30.0" prefWidth="190.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Số CCCD" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="cccdKHField" prefHeight="30.0" prefWidth="190.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="328.0" prefWidth="419.0" styleClass="box-boder" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="373.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="188.0" text="Thông tin đặt phòng" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Mã phòng:" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="maPhongLabel" text="Label" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Loại phòng" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="loaiPhongLabel" text="Label" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Ngày thuê" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="ngayThueField" prefHeight="30.0" prefWidth="180.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="373.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Mã NV" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="201.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="maNVField" prefHeight="30.0" prefWidth="180.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <stylesheets>
+                  <URL value="@../assets/css/style.css" />
+                  <URL value="@../assets/css/style.css" />
+               </stylesheets>
+            </VBox>
+         </right>
+         <bottom>
+            <VBox prefHeight="292.0" prefWidth="900.0" styleClass="box-chim" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="900.0" styleClass="box-chim">
+                     <children>
+                        <Label text="Thông tin thuê dịch vụ" />
+                     </children>
+                     <stylesheets>
+                        <URL value="@../assets/css/style.css" />
+                        <URL value="@../assets/css/style.css" />
+                     </stylesheets>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="900.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="157.0">
+                           <children>
+                              <Label text="Tên dịch vụ" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="261.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ChoiceBox fx:id="dichVuChoiceBox" prefHeight="31.0" prefWidth="435.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="130.0">
+                           <children>
+                              <Button fx:id="themDichVuButton" mnemonicParsing="false" onAction="#themDichVuVaoTable" text="Thêm dịch vụ" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="133.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#xoaDichVuDaChon" text="Xóa dịch vụ" fx:id="xoaDichVuButton" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="154.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TableView fx:id="tableDichVu" prefHeight="170.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn fx:id="colMaDV" prefWidth="220.0" text="Mã DV" />
+                              <TableColumn fx:id="colTenDV" prefWidth="366.0" text="Tên DV" />
+                              <TableColumn fx:id="colGiaDV" prefWidth="147.0" text="Đơn giá" />
+                              <TableColumn fx:id="colSoluong" prefWidth="164.0" text="Số lượng" />
+                          </columns>
+                        </TableView>
+                     </children></HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="900.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="160.0" text="Tổng tiền dịch vụ:" />
+                        <Label fx:id="tongTienLabel" prefHeight="21.0" prefWidth="153.0" text="Label">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children></HBox>
+                  <HBox prefHeight="36.0" prefWidth="900.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="143.0">
+                           <children>
+                              <Button fx:id="huyButton" mnemonicParsing="false" onAction="#handleHuy" prefHeight="20.0" prefWidth="100.0" styleClass="buton-huy" stylesheets="@../assets/css/style.css" text="Hủy" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="136.0">
+                           <children>
+                              <Button fx:id="datPhongButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" styleClass="button-datphong" stylesheets="@../assets/css/style.css" text="Đặt phòng" />
+                           </children>
+                        </HBox>
+                     </children></HBox>
+               </children>
+               <stylesheets>
+                  <URL value="@../assets/css/style.css" />
+                  <URL value="@../assets/css/style.css" />
+               </stylesheets>
+            </VBox>
+         </bottom>
+         <stylesheets>
+            <URL value="@../assets/css/style.css" />
+            <URL value="@../assets/css/style.css" />
+         </stylesheets>
+      </BorderPane>
+   </children>
+</AnchorPane>

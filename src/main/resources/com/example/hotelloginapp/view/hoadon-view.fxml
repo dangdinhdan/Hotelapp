@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelloginapp.controller.HoaDonController">
+   <children>
+      <VBox layoutX="431.0" layoutY="171.0" prefHeight="200.0" prefWidth="100.0" styleClass="top-box" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1080.0" styleClass="box-chim" stylesheets="@../assets/css/style.css">
+               <children>
+                  <Label text="DANH SÁCH HÓA ĐƠN">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="55.0" prefWidth="1080.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="912.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="tfsearch" prefHeight="31.0" prefWidth="895.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="168.0">
+                           <children>
+                              <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#SearchHoaDon" text="Tìm kiếm" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TableView fx:id="HoaDonTable" prefHeight="200.0" prefWidth="200.0" styleClass="box-chim" stylesheets="@../assets/css/style.css" HBox.hgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="colMaHD" prefWidth="100.0" text="Mã HĐ" />
+                              <TableColumn fx:id="colMaDP" prefWidth="166.0" text="Mã ĐP" />
+                              <TableColumn fx:id="colMaKH" prefWidth="133.0" text="Mã KH" />
+                              <TableColumn fx:id="colMaNV" prefWidth="133.0" text="Mã NV" />
+                              <TableColumn fx:id="colNgayThue" prefWidth="133.0" text="Ngày Thuê" />
+                              <TableColumn fx:id="colNgayTra" prefWidth="133.0" text="Ngày trả" />
+                              <TableColumn fx:id="colThanhtien" prefWidth="133.0" text="Thành tiền" />
+                              <TableColumn fx:id="colNgaylapHD" prefWidth="133.0" text="Ngày lập HĐ" />
+                           </columns>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
