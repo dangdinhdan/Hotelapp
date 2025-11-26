@@ -27,10 +27,7 @@ public class HotelController {
 
    }
 
-    public void loadtrangchu() {
 
-        loadScreen("/com/example/hotelloginapp/view/trangchu-view.fxml");
-    }
     private void loadScreen(String fxmlFile) {
         try {
             // Load FXML mới
@@ -44,6 +41,10 @@ public class HotelController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void loadtrangchu() {
+
+        loadScreen("/com/example/hotelloginapp/view/trangchu-view.fxml");
     }
     public void loadQlphong() {
 
